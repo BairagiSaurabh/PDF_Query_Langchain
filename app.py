@@ -11,7 +11,9 @@ from langchain.llms import OpenAI
 from langchain.chains.question_answering import load_qa_chain
 from langchain.callbacks import get_openai_callback
 import os
-load_dotenv()
+#load_dotenv()
+
+api_key = os.getenv("OpenAI_API_KEY")
 
 ## Reading the PDF
 
@@ -41,7 +43,7 @@ if pdf is not None:
 ## Create Embeddings of each chunk of data and store them in the Vector DB
     
     store_name = pdf.name[:-4] # extract the pdf name
-    embeddings = OpenAIEmbeddings(openai_api_key = os.environ["OpenAI_API_KEY"]) # using OpenAI to create embeddings
+    embeddings = OpenAIEmbeddings(openai_api_key = api_key) # using OpenAI to create embeddings
 
     if os.path.exists(f"{store_name}"): # if already the vector db is present then load it
         #path = f"{store_name}\index.pkl"
