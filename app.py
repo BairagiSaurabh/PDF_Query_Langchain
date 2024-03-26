@@ -13,7 +13,7 @@ from langchain.callbacks import get_openai_callback
 import os
 #load_dotenv()
 
-api_key = os.getenv("OpenAI_API_KEY")
+api_key = os.getenv("OPENAI_API_KEY")
 
 ## Reading the PDF
 
