@@ -4,6 +4,10 @@ In this project, we will answer queries based on the uploaded pdf.
 
 We have used Langchain model here to achieve this task
 
+## Deployed Link 
+
+[Link](https://huggingface.co/spaces/SBairagi/PDF_Query_Langchain)
+
 Below are some examples as to how this model works.
 
 ![0](pdf_1.png)
